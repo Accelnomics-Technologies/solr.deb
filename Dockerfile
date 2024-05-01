@@ -11,7 +11,7 @@ COPY --chown=solr:solr ./src/open-semantic-entity-search-api/src/solr/opensemant
 COPY etc /etc
 
 # Recreate symbolic links for hunspell (required for windows compatibility)
-RUN ln -sf /usr/share/hunspell /var/solr/data/opensemanticsearch/conf/lang/
-RUN ln -sf /usr/share/hunspell /var/solr/data/opensemanticsearch-entities/conf/lang/
+RUN ln -sf /usr/share/hunspell /tmp/data/opensemanticsearch/conf/lang/
+RUN ln -sf /usr/share/hunspell /tmp/data/data/opensemanticsearch-entities/conf/lang/
 
 USER solr
